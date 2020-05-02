@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Web;
+
+
+
+
+namespace PortalSaludWCF.Dominio
+{
+    [DataContract]
+    public class Paciente
+    {
+        [DataMember]
+        public string  pac_nombres { get; set; }
+        [DataMember]
+        public string  pac_dni   { get; set; }
+        [DataMember]
+        public string pac_cel { get; set; }
+        [DataMember]
+        public string pac_dir { get; set; }
+        [DataMember]
+        public string pac_ema { get; set; }
+        [DataMember]
+        public int pac_cod { get; set; }
+
+        public Paciente()
+        {
+            this.pac_nombres = string.Empty;
+            this.pac_dni = string.Empty;
+            this.pac_cel = string.Empty;
+            this.pac_dir = string.Empty;
+            this.pac_ema = string.Empty;
+            this.pac_cod = 0;
+        }
+
+    }
+}
